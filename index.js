@@ -12,7 +12,7 @@ const connect = () => {
   );
 };    
 
-app.listen(3000, async () => {
+app.listen(5500, async () => {
   try{
     await connect();
     console.log("Listening on port 5500");
