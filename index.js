@@ -4,22 +4,18 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-//this is the middle-ware used to convert Post req. object to js object
 app.use(express.json());
 
-// 1. Estabish connection with database using atlas connection string
 const connect = () => {
   return mongoose.connect(
     "mongodb://localhost:27017/books"
-    //"mongodb+srv://Surajit00:surajit@1998@cluster0.fdx10.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-   
   );
 };    
 
 app.listen(3000, async () => {
   try{
     await connect();
-    console.log("Listening on port 3000");
+    console.log("Listening on port 5500");
   }catch(err){
     console.log(err);
   }
